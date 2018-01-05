@@ -1,0 +1,61 @@
+.site-container > footer {
+  background: linear-gradient(to left, #121315, #191a1c);
+  border-top: 1px solid $border-color;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 55px;
+  padding-top: 3px;
+
+  > nav {
+    margin-left: 10px;
+    margin-bottom: 5px;
+
+    > ul {
+      > li {
+        display: inline-block;
+
+        > a {
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+      }
+
+      > li::after {
+        color: #4f4f4f;
+        font-size: 11px;
+        top: -2px;
+        margin: 0;
+        position: relative;
+        content: " | ";
+      }
+
+      > li:last-child::after {
+        content: "";
+      }
+    }
+
+    > .copyright {
+      font-size: 11px;
+      color: #7e7e80;
+    }
+  }
+
+  > .footer-social {
+    flex-grow: 1;
+    margin-right: 15px;
+
+    > ul {
+      text-align: right;
+      height: 29px;
+
+      > li {
+        margin: 3px;
+      }
+
+      @include make-social-button('twitter');
+      @include make-social-button('facebook');
+      @include make-social-button('youtube');
+    }
+  }
+}

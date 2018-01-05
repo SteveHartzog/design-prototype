@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../../fonts/open-sans.regular.ttf');
+}
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('../../fonts/open-sans.semibold.ttf');
+}
+
+* {
+  font-family: OpenSans;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+

@@ -1,0 +1,132 @@
+%nav-snowflakes {
+  background: url('/images/nav-icons-sprite.png') $icon-nav-snowflakes 0;
+}
+
+%nav-magnets {
+  background: url('/images/nav-icons-sprite.png') $icon-nav-magnets 0;
+}
+
+%nav-liquids {
+  background: url('/images/nav-icons-sprite.png') $icon-nav-liquids 0;
+}
+
+@mixin make-nav-button-by-id($icon) {
+  ##{$icon} {
+    height: 23px;
+    width: 23px;
+    @extend %nav-#{$icon};
+  }
+}
+
+@mixin button() {
+  cursor: pointer;
+  border-radius: 2px;
+  background: linear-gradient(#5a84aa, #496783);
+  border: 1px solid #5a84aa;
+  text-shadow: 0 1px black;
+  font-size: 13px;
+}
+
+%skill-stacks {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-stacks 50px;
+
+  &:hover {
+    background-position: $icon-skill-stacks 0;
+  }
+}
+
+%skill-eat {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-eat 50px;
+
+  &:hover {
+    background-position: $icon-skill-eat 0;
+  }
+}
+
+%skill-cake {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-cake 50px;
+
+  &:hover {
+    background-position: $icon-skill-cake 0;
+  }
+}
+
+%skill-king {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-king 50px;
+
+  &:hover {
+    background-position: $icon-skill-king 0;
+  }
+}
+
+%skill-ship {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-ship 50px;
+
+  &:hover {
+    background-position: $icon-skill-ship 0;
+  }
+}
+
+%skill-scuba {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-scuba 50px;
+
+  &:hover {
+    background-position: $icon-skill-scuba 0;
+  }
+}
+
+%skill-bolt {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-bolt 50px;
+
+  &:hover {
+    background-position: $icon-skill-bolt 0;
+  }
+}
+
+%skill-skull {
+  background: url('/images/talent-icons-sprite.png') $icon-skill-skull 50px;
+
+  &:hover {
+    background-position: $icon-skill-skull 0;
+  }
+}
+
+@mixin make-skill-button($icon) {
+  > ##{$icon} {
+    border: 1px solid rgba(255, 255, 255, 0);
+    height: 52px;
+    width: 52px;
+    margin: 3px;
+    @extend %skill-#{$icon};
+  }
+}
+
+%social-twitter {
+  background-position: $icon-social-twitter 0;
+}
+
+%social-facebook {
+  background-position: $icon-social-facebook 0;
+}
+
+%social-youtube {
+  background-position: $icon-social-youtube 0;
+}
+
+@mixin make-social-button($icon) {
+  li {
+    display: inline-block;
+    margin-right: 3px;
+    width: 28px;
+    height: 28px;
+    @include button();
+    background: url('/images/social-icons-sprite.png') no-repeat, -moz-linear-gradient(to top, #5a84aa 0%, #496783 100%);
+    background: url('/images/social-icons-sprite.png') no-repeat, -webkit-linear-gradient(#5a84aa 0%, #496783 100%);
+    background: url('/images/social-icons-sprint.png') no-repeat, -ms-linear-gradient(to top, #5a84aa 0%, #496783 100%);
+    background: url('/images/social-icons-sprint.png') no-repeat linear-gradient(to bottom, #5a84aa 0%, #496783 100%);
+  }
+
+  li.#{$icon} {
+    @extend %social-#{$icon};
+  }
+}

@@ -1,0 +1,19 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#080c0f, #0c1417);
+}
+
+.site-container {
+  width: $max-width;
+  display: flex;
+  min-height: 98vh;
+  flex-direction: column;
+}
+
+.site-container > main {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
